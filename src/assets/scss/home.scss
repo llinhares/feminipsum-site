@@ -1,0 +1,18 @@
+#home{
+
+  .logo{
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    max-width: 1310px;
+    
+    @include media-breakpoint-down(xxl){
+      padding: 0 100px;
+    }
+    @include media-breakpoint-down(sm){
+      max-width: 225px;
+      margin-left: 15px;
+      padding: 0px;
+    }
+  }
+}

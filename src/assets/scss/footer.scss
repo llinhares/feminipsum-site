@@ -1,0 +1,49 @@
+.feminipsum-footer{
+  height: $_footerHeight;
+  background: $_darkGrey;
+
+  @include media-breakpoint-down(sm){
+    height: $_footerHeightMob;
+  }
+  .marquee{
+    position: relative;
+    overflow: hidden;
+    --offset: 50vw;
+    --move-initial: calc(-30% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+
+    .marquee__inner {
+      width: fit-content;
+      display: flex;
+      position: relative;
+      transform: translate3d(var(--move-initial), 0, 0);
+      animation: marquee 15s linear infinite;
+      animation-play-state: running;
+
+      span {
+        font-size: $_fontSizeOneDesk;
+        letter-spacing: -1px;
+        padding: 0 5px;
+        white-space: nowrap;
+        color: $_red;
+
+        &:after{
+          content: " \2190";
+        }
+        @include media-breakpoint-down(sm){
+          font-size: $_fontSizeOneMob;
+        }
+      }
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate3d(var(--move-initial), 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(var(--move-final), 0, 0);
+    }
+  }
+}

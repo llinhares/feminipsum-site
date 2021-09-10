@@ -1,0 +1,38 @@
+{
+  "languages":[
+    {
+      "id": "en",
+      "label": "En"
+    },
+    {
+      "id": "pt-br",
+      "label": "Pt"
+    }
+  ],
+  "localize":{
+    "en":{
+      "htmlLang": "en",
+      "htmlTitle": "Feminipsum - EN",
+      "metaDescription": "To put an end to sexism, not a characther will go wasted.",
+      "metaKeywords": "feminipsum, lorem ipsum, feminist, feminism, empowerment campaign, luiza lopes, vitoria ferrari, art director, copywriter, brazilian agencies, sexism, portfolio",
+      "aboutTitle": "About",
+      "closeAboutTitle": "Close",
+      "aboutText": "Sexist jokes, discrimination and sexual harassment. That's what many women face every day, even in the coolest advertising agencies. To make people in the industry consider and discuss this, <a href='https://luizalopes.cargo.site/' target='_blank'>Luiza</a> and <a href='https://vitoriaferrari.com/' target='_blank'>Vitória</a> created Feminipsum: a Lorem Ipsum website where the text generator adresses sexism in ad agencies.",
+      "textGeneratorTitle": "Paragraphs",
+      "textGeneratorCopyTitle": "Click to copy",
+      "footerText": "To put an end to sexism, not a characther will go wasted"
+    },
+    "pt-br":{
+      "htmlLang": "pt-br",
+      "htmlTitle": "Feminipsum - PT-BR",
+      "metaDescription": "Para acabar com o machismo, nenhum caractere será desperdiçado.",
+      "metaKeywords": "feminipsum, lorem ipsum, feminista, feminismo, luiza lopes, vitoria ferrari, agencia, machismo",
+      "aboutTitle": "Sobre",
+      "closeAboutTitle": "Fechar",
+      "aboutText": "Piadas machistas, discriminação e assédio sexual. É isso que muitas mulheres enfrentam todos os dias, inclusive nas agências de publicidade mais descoladas. Para chamar atenção sobre essa realidade, <a href='https://luizalopes.cargo.site/' target='_blank'>Luiza</a> e <a href='https://vitoriaferrari.com/' target='_blank'>Vitória</a> criaram o Feminipsum: um site de Lorem Ipsum onde o gerador de texto aborda o machismo nas agências.",
+      "textGeneratorTitle": "Parágrafos",
+      "textGeneratorCopyTitle": "Copiar texto",
+      "footerText": "Para acabar com o machismo, nenhum caractere será desperdiçado"
+    }
+  }
+}

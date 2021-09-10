@@ -1,0 +1,23 @@
+.copyToClipboard{
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  background: $_darkGrey;
+  color: $_red;
+  font-size: $_fontSizeOneDesk;
+  border: 2px solid $_red;
+  padding: 0 20px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+
+  @include media-breakpoint-down(sm){
+    padding: 5px 10px;
+    font-size: $_fontSizeOneMob;
+  }
+  &:active{
+    background: $_red;
+    color: $_darkGrey;
+  }   
+}

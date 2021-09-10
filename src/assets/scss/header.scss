@@ -1,0 +1,49 @@
+.feminipsum-header{
+  height: $_headerHeight;
+  background: $_darkGrey;
+
+  @include media-breakpoint-down(sm){
+    height: $_headerHeightMob;
+  }
+  .btn{
+    color: $_red;
+    font-size: $_fontSizeOneDesk;
+    outline: none;
+    box-shadow: none;
+    
+    @include media-breakpoint-down(sm){
+      font-size: $_fontSizeOneMob;
+    }
+  }
+  .navbar-nav{
+    flex-direction: row;
+    
+    .nav-item{
+      position: relative;
+
+      &:not(:last-child){
+        padding-right: 80px;
+        
+        @include media-breakpoint-down(sm){
+          padding-right: 40px;
+        }
+        &:after{
+          position: absolute;
+          content: '';
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 80px;
+          height: 4px;
+          background: $_red;
+        
+          @include media-breakpoint-down(sm){
+            width: 30px;
+            height: 2px;
+            right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

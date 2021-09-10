@@ -1,0 +1,40 @@
+.changeParagraphs{
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: $_fontSizeOneDesk;
+
+  @include media-breakpoint-down(sm){
+    font-size: $_fontSizeOneMob;
+  }
+
+  .controller{
+    background: $_darkGrey;
+    color: $_red;
+    padding: 0 20px;
+    border: 2px solid $_red;
+
+    @include media-breakpoint-down(sm){
+      padding: 0 10px;
+    }    
+    &:not(:first-of-type){
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    &:not(:last-child){
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+    }
+    &:active{
+      background: $_red;
+      color: $_darkGrey;
+    }
+  }
+  .title{
+    border: 2px solid $_red;
+    border-left: none;
+    border-right: none;
+    padding: 5px 10px;
+    background: $_darkGrey;
+  }
+}

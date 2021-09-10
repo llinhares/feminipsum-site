@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('./../fonts/SuisseIntl-Regular.eot');
+  src: url('./../fonts/SuisseIntl-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/SuisseIntl-Regular.woff2') format('woff2'),
+      url('./../fonts/SuisseIntl-Regular.woff') format('woff'),
+      url('./../fonts/SuisseIntl-Regular.ttf') format('truetype'),
+      url('./../fonts/SuisseIntl-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('./../fonts/SuisseIntl-Book.eot');
+  src: url('./../fonts/SuisseIntl-Book.eot?#iefix') format('embedded-opentype'),
+      url('./../fonts/SuisseIntl-Book.woff2') format('woff2'),
+      url('./../fonts/SuisseIntl-Book.woff') format('woff'),
+      url('./../fonts/SuisseIntl-Book.ttf') format('truetype'),
+      url('./../fonts/SuisseIntl-Book.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
