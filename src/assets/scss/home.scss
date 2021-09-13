@@ -2,7 +2,11 @@
 
   .logo{
     max-width: 1310px;
-    
+    margin-left: 30px;
+
+    @include media-breakpoint-down(md){
+      margin-left: 0px;
+    }
     @include media-breakpoint-down(sm){
       max-width: 225px;
       margin-left: 15px;
