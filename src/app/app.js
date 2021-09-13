@@ -28,7 +28,16 @@ class App extends Component{
   }
 
   componentDidMount() {
-    this.setLanguage();
+    let initialLang;
+    if(window.location.hostname === 'feminipsum.org'){
+        initialLang = 'en'
+    } else if(window.location.hostname === 'feminipsum.com.br'){
+        initialLang = 'pt-br'
+    } else{
+      initialLang = this.state.language;
+    }
+
+    this.setLanguage(initialLang);
 
     window.onhashchange = e => {
       this.setState({hash: window.location.hash.replace('#','')});
@@ -44,29 +53,22 @@ class App extends Component{
   }
 
   setLanguage(e){
-    if(window.location.hash.replace('#','') === 'en' || window.location.hash.replace('#','') === 'pt-br'){
-      this.setState({
-        language: window.location.hash.replace('#','')
-      });
+    let lang = this.state.language;
+    if(typeof e != "undefined"){
+      lang = e
     }
-    else{
-      let lang = this.state.language;
-      if(typeof e != "undefined"){
-        lang = e
-      }
-      window.document.documentElement.lang = localizeSite.localize[lang].htmlLang;
-      document.title = localizeSite.localize[lang].htmlTitle;
-      document.querySelector('meta[name="description"]').setAttribute("content", localizeSite.localize[lang].metaDescription);
-      document.querySelector('meta[name="keywords"]').setAttribute("content", localizeSite.localize[lang].metaKeywords);
-      document.querySelector('meta[name="language"]').setAttribute("content", lang);
-      document.querySelector('meta[property="og:title"]').setAttribute("content", localizeSite.localize[lang].htmlTitle);
-      document.querySelector('meta[property="og:description"]').setAttribute("content", localizeSite.localize[lang].metaDescription);
-      document.querySelector('meta[property="twitter:title"]').setAttribute("content", localizeSite.localize[lang].htmlTitle);
-      document.querySelector('meta[property="twitter:description"]').setAttribute("content", localizeSite.localize[lang].metaDescription);
-      this.setState({
-        language: lang
-      }, this.changeParagraphs(this.state.paragraph));
-    }
+    window.document.documentElement.lang = localizeSite.localize[lang].htmlLang;
+    document.title = localizeSite.localize[lang].htmlTitle;
+    document.querySelector('meta[name="description"]').setAttribute("content", localizeSite.localize[lang].metaDescription);
+    document.querySelector('meta[name="keywords"]').setAttribute("content", localizeSite.localize[lang].metaKeywords);
+    document.querySelector('meta[name="language"]').setAttribute("content", lang);
+    document.querySelector('meta[property="og:title"]').setAttribute("content", localizeSite.localize[lang].htmlTitle);
+    document.querySelector('meta[property="og:description"]').setAttribute("content", localizeSite.localize[lang].metaDescription);
+    document.querySelector('meta[property="twitter:title"]').setAttribute("content", localizeSite.localize[lang].htmlTitle);
+    document.querySelector('meta[property="twitter:description"]').setAttribute("content", localizeSite.localize[lang].metaDescription);
+    this.setState({
+      language: lang
+    }, this.changeParagraphs(this.state.paragraph));
   }
 
   showText(){
